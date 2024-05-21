@@ -39,17 +39,16 @@ class _MyHomePageState extends State<MyHomePage> {
        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Container(
-          width: 300,
-          height: 300,
+      body: 
+      Text(
+        'Hello Text tutorial',
+        style: TextStyle(
+          fontSize: 25,
           color: Colors.lightBlue,
-          child: 
-          Center(
-            child: Text('Hello Devops/Cloud')
-            ),
+          fontWeight: FontWeight.bold,
+          backgroundColor: Colors.deepOrangeAccent
         ),
-      ) // This trailing comma makes auto-formatting nicer for build methods.
+      )
     );
   }
 }
