@@ -31,24 +31,31 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
-   return Scaffold(
-      appBar: AppBar(
-       backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: 
-      Text(
-        'Hello Text tutorial',
-        style: TextStyle(
-          fontSize: 25,
-          color: Colors.lightBlue,
-          fontWeight: FontWeight.bold,
-          backgroundColor: Colors.deepOrangeAccent
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: Text(widget.title),
         ),
-      )
-    );
+        body: Center(
+            child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            OutlinedButton(
+              child: Text('Click Here'),
+              onPressed: () {
+                print('Text button clicked');
+              },
+            ),
+            SizedBox(width: 30,),
+            OutlinedButton(
+              child: Text('Click Here'),
+              onPressed: () {
+                print('Text button clicked');
+              },
+            ),
+          ],
+        )));
   }
 }
